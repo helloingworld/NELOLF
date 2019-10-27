@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NELOLF</name>
+    </assembly>
+    <members>
+        <member name="T:NELOLF.MainForm">
+            <summary>
+            The Main Form class.
+            </summary>
+            <summary>
+            Main form class.
+            </summary>
+        </member>
+        <member name="F:NELOLF.MainForm.filesList">
+            <summary>
+            The list of files (displayed in the virtual mode listview).
+            </summary>
+        </member>
+        <member name="M:NELOLF.MainForm.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NELOLF.MainForm"/> class.
+            </summary>
+        </member>
+        <member name="M:NELOLF.MainForm.ScanPath(System.String)">
+            <summary>
+            Scans a path by running a dir command process.
+            </summary>
+            <param name="path">The path to scan.</param>
+        </member>
+        <member name="M:NELOLF.MainForm.Process_OutputDataReceived(System.Object,System.Diagnostics.DataReceivedEventArgs)">
+            <summary>
+            Add a new file item each time the dir command writes a line to its redirected
+            StandardOutput stream.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">Event data.</param>
+        </member>
+        <member name="M:NELOLF.MainForm.Process_Exited(System.Object,System.EventArgs)">
+            <summary>
+            Update the files list view and count when the dir command process exits.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">Empty event data.</param>
+        </member>
+        <member name="M:NELOLF.MainForm.DriveMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Scan a the specified drive when a Drive menu item is clicked.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">Empty event data.</param>
+        </member>
+        <member name="M:NELOLF.MainForm.FilesListView_RetrieveVirtualItem(System.Object,System.Windows.Forms.RetrieveVirtualItemEventArgs)">
+            <summary>
+            Returns the required ListViewItem for the virtual mode list view.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">Event data.</param>
+        </member>
+        <member name="M:NELOLF.MainForm.FilesListView_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            Open item in Windows Explorer on double-click.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">Empty event data.</param>
+        </member>
+        <member name="F:NELOLF.MainForm.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NELOLF.MainForm.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NELOLF.MainForm.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NELOLF.Program">
+            <summary>
+            The main program class.
+            </summary>
+        </member>
+        <member name="M:NELOLF.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:NELOLF.SysUtils">
+            <summary>
+            System utility methods.
+            </summary>
+        </member>
+        <member name="M:NELOLF.SysUtils.RunDirProcess(System.String,System.EventHandler,System.Diagnostics.DataReceivedEventHandler)">
+            <summary>
+            Runs a dir command process.
+            </summary>
+            <param name="path">The path for the dir command.</param>
+            <param name="exited">Process exited event handler.</param>
+            <param name="received">Process data received event handler.</param>
+            <returns>The dir command process.</returns>
+        </member>
+        <member name="M:NELOLF.SysUtils.Explore(System.String)">
+            <summary>
+            Starts a new process and opens the location of the specified file in Explorer and selects it.
+            </summary>
+            <param name="fileName">The name of the file to be opened.</param>
+            <returns>The process object that was used to open the file.</returns>
+        </member>
+        <member name="T:NELOLF.UiUtils">
+            <summary>
+            User interface utility methods.
+            </summary>
+        </member>
+        <member name="M:NELOLF.UiUtils.SetExplorerTheme(System.IntPtr)">
+            <summary>
+            Set the "Explorer" set of visual style information.
+            </summary>
+            <param name="handle">Handle to the control whose visual style information is to be changed.</param>
+        </member>
+        <member name="T:NELOLF.UiUtils.NativeMethods">
+            <summary>
+            Required Windows native methods definitions.
+            </summary>
+        </member>
+    </members>
+</doc>

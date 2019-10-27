@@ -48,9 +48,8 @@
             this.filesListView.UseCompatibleStateImageBehavior = false;
             this.filesListView.View = System.Windows.Forms.View.Details;
             this.filesListView.VirtualMode = true;
-            this.filesListView.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.filesListView_RetrieveVirtualItem);
-            this.filesListView.SizeChanged += new System.EventHandler(this.filesListView_SizeChanged);
-            this.filesListView.DoubleClick += new System.EventHandler(this.filesListView_DoubleClick);
+            this.filesListView.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.FilesListView_RetrieveVirtualItem);
+            this.filesListView.DoubleClick += new System.EventHandler(this.FilesListView_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -68,7 +67,6 @@
             this.Padding = new System.Windows.Forms.Padding(16, 16, 0, 16);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NELOLF";
-            this.Load += new System.EventHandler(this.MainForm_Load);
 
         }
 
